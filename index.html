@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/output.css">
+</head>
+
+<body>
+    <main class="w-full h-screen bg-gray-900 flex justify-center items-center font-vazir">
+        <!-- menu -->
+        <section id="first-section"
+            class="animate-anime w-[85%] md:w-1/2 bg-white h-[500px] transition-all duration-1000 rounded-xl relative flex flex-col items-center">
+            <h1 class="text-gray-900 text-3xl my-10">تست اطلاعات عمومی</h1>
+            <h2 class="text-gray-900 text-2xl mt-12 mb-7">تعداد سوالات را انتخاب کنید :</h2>
+            <div id="menu"
+                class="flex justify-center gap-2 sm:gap-4 md:gap-7 *:w-14 *:h-14 *:rounded-full *:border *:border-gray-900 *:font-semibold">
+                <button class="hover:bg-gray-900 hover:text-white transition-all duration-300">4</button>
+                <button class="hover:bg-gray-900 hover:text-white transition-all duration-300">8</button>
+                <button class="hover:bg-gray-900 hover:text-white transition-all duration-300">12</button>
+                <button class="hover:bg-gray-900 hover:text-white transition-all duration-300">16</button>
+                <button class="hover:bg-gray-900 hover:text-white transition-all duration-300">20</button>
+            </div>
+            <button id="start-test"
+                class="mt-24 py-5 px-20 rounded-lg text-xl bg-gray-900 text-white hover:bg-gray-700 transition-all duration-200">شروع</button>
+        </section>
+
+        <!-- Quiz -->
+        <section id="second-section" class="w-[85%] md:w-[75%] lg:w-1/2 bg-white h-[500px] rounded-xl relative hidden">
+            <span id="timer"
+                class="flex absolute top-4 left-3 w-10 h-10 justify-center items-center rounded-full border border-gray-900 animate-bounce">15</span>
+            <h2 class="text-center text-2xl border-b border-gray-900 py-4">تست اطلاعات عمومی</h2>
+            <p id="question-p" class="ms-5 mt-14 text-xl">
+                ...
+            </p>
+            <div class="flex mt-14 justify-center flex-wrap gap-5">
+                <div
+                    class="w-[45%] py-[10px] mb-5 cursor-pointer border-2 border-gray-900 text-gray-900 rounded-full flex justify-center items-center transition-all duration-300 text-lg font-semibold question-item">
+                    ...
+                </div>
+                <div
+                    class="w-[45%] py-[10px] mb-5 cursor-pointer border-2 border-gray-900 text-gray-900 rounded-full flex justify-center items-center transition-all duration-300 text-lg font-semibold question-item">
+                    ...
+                </div>
+                <div
+                    class="w-[45%] py-[10px] cursor-pointer border-2 border-gray-900 text-gray-900 rounded-full flex justify-center items-center transition-all duration-300 text-lg font-semibold question-item">
+                    ...
+                </div>
+                <div
+                    class="w-[45%] py-[10px] cursor-pointer border-2 border-gray-900 text-gray-900 rounded-full flex justify-center items-center transition-all duration-300 text-lg font-semibold question-item">
+                    ...
+                </div>
+            </div>
+            <div class="flex items-center justify-between px-6 mt-14">
+                <p class="text-2xl font-semibold flex items-center gap-3">
+                    <span id="first-question" class="underline underline-offset-2">1</span>
+                    از
+                    <span id="last-question" class="underline underline-offset-2">4</span>
+                </p>
+                <button id="next-question"
+                    class="py-3 px-14 rounded-lg text-lg bg-gray-900 text-white hover:bg-gray-700 transition-all duration-200 opacity-0">بعدی</button>
+            </div>
+        </section>
+
+        <!-- info -->
+        <div class="hidden w-[170px] h-[170px] rounded-full border-[1px] border-infoColor outline-[1px] outline-infoColor 
+    outline-offset-8 fixed bottom-[50px] right-[40px] lg:flex items-center justify-center select-none z-50 group">
+            <div class="circle w-[165px] h-[165px] rounded-full">
+                <img src="img/me5.webp" alt="" class="w-full h-full rounded-full object-cover">
+            </div>
+            <strong class="absolute top-[45%] right-[-87px] rotate-[90deg] text-[15px] italic text-infoColor">Frontend
+                Developer</strong>
+            <a href="https://www.linkedin.com/in/reza-geshani-web"><i
+                    class="bi bi-linkedin group-hover:visible text-[26px] text-white absolute invisible transition-all duration-150 py-[10px] px-[30px] hover:opacity-100 hover:text-[#1f9caa] top-[-10px] left-[-58px]"></i></a>
+            <a href="https://www.instagram.com/rezageshani_web"><i
+                    class="bi bi-instagram group-hover:visible text-[26px] absolute invisible transition-all duration-150 py-[10px] px-[30px] hover:opacity-100 hover:text-[#1f9caa] text-white top-[40px] left-[-80px]"></i></a>
+            <a href="https://github.com/RezaGeshaniWeb/"><i
+                    class="bi bi-github group-hover:visible text-[26px] absolute invisible transition-all duration-150 py-[10px] px-[30px] hover:opacity-100 hover:text-[#1f9caa] text-white top-[90px] left-[-80px]"></i></a>
+            <a href="mailto:rezageshaniweb@gmail.com"><i
+                    class="bi bi-envelope-at group-hover:visible text-[26px] absolute invisible transition-all duration-150 py-[10px] px-[30px] hover:opacity-100 hover:text-[#1f9caa] text-white top-[130px] left-[-58px]"></i></a>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

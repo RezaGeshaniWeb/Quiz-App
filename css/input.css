@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'vazir';
+    src: url(../font/Vazir.woff);
+}
+
+@keyframes anime {
+    0% {
+        transform: scale(.5);
+        overflow: hidden;
+    } 
+
+    65% {
+        transform: scale(1);
+        overflow: visible;
+    }
+    
+    75% {
+        transform: scale(.9);
+        overflow: hidden;
+    } 
+
+    100% {
+        transform: scale(1);
+        overflow: visible;
+    }
+}
