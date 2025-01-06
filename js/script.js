@@ -179,6 +179,8 @@ function setTimer() {
                     }
                 })
 
+                userSelect.push(null)
+
                 setTimeout(() => {
                     if (step < question.length - 1) {
                         step++
@@ -196,6 +198,8 @@ function setTimer() {
                     }
                 }, 2000)
             } else {
+                userSelect.push(selectedOption)
+
                 if (step < question.length - 1) {
                     step++
                     firstQuestion.innerText++
@@ -264,6 +268,7 @@ nextQuestionBtn.addEventListener('click', () => {
             selectedOption = item.innerText
         }
     })
+
     userSelect.push(selectedOption)
 
     let correctOption = question[step].trueOption
